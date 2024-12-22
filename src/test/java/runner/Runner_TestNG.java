@@ -12,7 +12,11 @@ import org.testng.annotations.Listeners;
                 glue = {"step_definitions", "hooks"},
                 tags = "@TutorialsNinjaLogin or @TutorialsNinjaAddToCart or @TutorialsNinjaLogout or @TutorialsNinjaRegister or @TutorialsNinjaSearchProduct",
                 monochrome = true,
-                plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","pretty", "html:target/site/cucumber-report.html", "json:target/cucumber1.json"}
+                plugin = {"pretty",
+                        "html:target/cucumber-report.html",
+                        "json:target/cucumber.json",
+                        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                }
         )
 
 public class Runner_TestNG extends AbstractTestNGCucumberTests {
